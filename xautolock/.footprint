@@ -1,0 +1,6 @@
+drwxr-xr-x	pshevtsov/users	usr/
+drwxr-xr-x	pshevtsov/users	usr/bin/
+-rwxr-xr-x	pshevtsov/users	usr/bin/xautolock
+drwxr-xr-x	pshevtsov/users	usr/man/
+drwxr-xr-x	pshevtsov/users	usr/man/man1/
+-r--r--r--	pshevtsov/users	usr/man/man1/xautolock.1x.gz

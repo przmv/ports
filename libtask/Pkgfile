@@ -1,0 +1,17 @@
+# Description: A coroutine library for C and Unix
+# URL: http://swtch.com/libtask
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on:
+
+name=libtask
+version=1.0
+release=1
+source=(http://swtch.com/libtask.tar.gz)
+
+build() {
+    cd $name
+    make
+    install -Dm644 libtask.a $PKG/usr/lib/libtask.a
+    install -Dm644 task.h $PKG/usr/include/task.h
+}

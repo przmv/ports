@@ -1,0 +1,16 @@
+# Description: extracts the text out of OpenDocument Texts
+# URL: http://stosberg.net/odt2txt/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+
+name=odt2txt
+version=0.4
+release=1
+source=(http://stosberg.net/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    make
+    install -Dm755 odt2txt $PKG/usr/bin/odt2txt
+    install -Dm644 odt2txt.1 $PKG/usr/man/man1/odt2txt.1
+}

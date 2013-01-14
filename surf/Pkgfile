@@ -1,0 +1,15 @@
+# Description: surf is a simple web browser based on WebKit/GTK+.
+# URL: http://surf.suckless.org
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: gtk, webkit
+
+name=surf
+version=0.5
+release=1
+source=(http://dl.suckless.org/$name/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    make PREFIX=/usr DESTDIR=$PKG install
+}

@@ -1,0 +1,25 @@
+# Description: A dynamic window manager for X
+# URL: http://dwm.suckless.org
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg-libx11 xorg-libxinerama
+
+name=dwm
+version=6.0
+release=1
+source=(http://dl.suckless.org/$name/$name-$version.tar.gz
+config.h
+dwm.desktop)
+
+build() {
+    cd $name-$version
+    cp $SRC/config.h config.h
+    sed -i 's/CPPFLAGS =/CPPFLAGS +=/g' config.mk
+    sed -i 's/^CFLAGS = -g/#CFLAGS += -g/g' config.mk
+    sed -i 's/^#CFLAGS = -std/CFLAGS += -std/g' config.mk
+    sed -i 's/^LDFLAGS = -g/#LDFLAGS += -g/g' config.mk
+    sed -i 's/^#LDFLAGS = -s/LDFLAGS += -s/g' config.mk
+    make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+    make PREFIX=/usr DESTDIR=$PKG install
+    install -m644 -D $SRC/dwm.desktop $PKG/usr/share/xsessions/dwm.desktop
+}

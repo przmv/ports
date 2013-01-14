@@ -1,0 +1,17 @@
+# Description: An automatic X screen-locker/screen-saver
+# URL: ftp://ibiblio.org/pub/Linux/X11/screensavers/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: libxss xorg-imake
+
+name=xautolock
+version=2.2
+release=1
+source=(ftp://ibiblio.org/pub/Linux/X11/screensavers/$name-$version.tgz)
+
+build() {
+    cd $name-$version
+    xmkmf
+    make
+    make DESTDIR=$PKG install
+    make DESTDIR=$PKG install.man
+}

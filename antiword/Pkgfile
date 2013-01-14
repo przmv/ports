@@ -1,0 +1,19 @@
+# Description: A free MS Word reader for Linux and RISC OS
+# URL: http://www.winfield.demon.nl/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+
+name=antiword
+version=0.37
+release=1
+source=(http://www.winfield.demon.nl/linux/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    sed -i "s|GLOBAL_INSTALL_DIR =.*|GLOBAL_INSTALL_DIR = /usr/bin|g" \
+        Makefile.Linux
+
+    make OPT="${CFLAGS} -DNDEBUG" LDFLAGS="${LDFLAGS}"
+    make DESTDIR=$PKG global_install
+    install -Dm644 Docs/antiword.1 $pkgdir/usr/share/man/man1/antiword.1
+}

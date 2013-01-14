@@ -1,0 +1,18 @@
+# Description: Simple (or small or suckless) X Image Viewer.
+# URL: https://github.com/muennich/sxiv
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg-libx11 xorg-xproto imlib2 giflib libexif desktop-file-utils
+
+name=sxiv
+version=1.0
+release=1
+source=(https://github.com/downloads/muennich/$name/$name-$version.tar.gz
+sxiv.desktop)
+
+build() {
+    cd $name-$version
+    make
+    make PREFIX=$PKG/usr install
+    install -D -m644 $SRC/sxiv.desktop $PKG/usr/share/applications/sxiv.desktop
+}

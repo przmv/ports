@@ -1,0 +1,20 @@
+# Description: Programmable bash completion for git
+# URL: http://www.kernel.org/pub/software/scm/git/docs
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: git
+
+name=git-bashcompletion
+version=1.8.0
+release=1
+source=(https://git-core.googlecode.com/files/git-$version.tar.gz)
+
+build() {
+    cd git-$version
+
+    install -Dm644 ./contrib/completion/git-completion.bash \
+        $PKG/usr/share/bash-completion/completions/git
+
+    install -Dm644 ./contrib/completion/git-prompt.sh \
+        $PKG/usr/share/git/git-prompt.sh
+}

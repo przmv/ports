@@ -1,0 +1,16 @@
+# Description: A Markdown implementation written in C
+# URL: http://www.pell.portland.or.us/~orc/Code/discount/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on:
+
+name=discount
+version=2.1.5a
+release=1
+source=(http://www.pell.portland.or.us/~orc/Code/discount/$name-$version.tar.bz2)
+
+build() {
+    cd $name-$version
+    ./configure.sh --prefix=/usr --mandir=/usr/man --enable-all-features
+    make DESTDIR=$PKG install.everything
+}

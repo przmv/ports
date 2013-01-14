@@ -1,0 +1,17 @@
+# Description: A C library that implements an SQL database engine
+# URL: http://www.sqlite.org/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on:
+
+name=sqlite2
+version=2.8.17
+release=1
+source=(http://www.sqlite.org/sqlite-$version.tar.gz)
+
+build() {
+    cd sqlite-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

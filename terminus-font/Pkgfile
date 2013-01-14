@@ -1,0 +1,21 @@
+# Description: A superb, monospace bitmap font (for X11 and console)
+# URL: http://sourceforge.net/projects/terminus-font/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg-font-alias xorg-font-util fontconfig
+
+name=terminus-font
+version=4.38
+release=2
+source=(http://downloads.sourceforge.net/project/$name/$name-$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    chmod +x configure # bug?
+    ./configure --prefix=/usr \
+                --x11dir=/usr/share/fonts/local \
+                --psfdir=/usr/share/kbd/consolefonts
+    make && make DESTDIR=$PKG install
+    install -Dm644 75-yes-terminus.conf \
+        $PKG/etc/fonts/conf.avail/75-yes-terminus.conf
+}

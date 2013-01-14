@@ -1,0 +1,20 @@
+# Description: Monospaced bitmap font designed for long work with computers (TTF version)
+# URL: http://www.ax86.net/2009/11/03/generating-up-to-date-ttf-files-for-the-terminus-font
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: fontconfig xorg-font-util
+
+name=terminus-font-ttf
+version=4.38
+release=1
+source=(http://files.ax86.net/terminus-ttf/$version/TerminusBold-$version.ttf
+        http://files.ax86.net/terminus-ttf/$version/TerminusMedium-$version.ttf
+        http://files.ax86.net/terminus-ttf/$version/TerminusMediumItalic-$version.ttf)
+
+build() {
+    cd $SRC
+    for i in *.ttf; do
+        local destname="$(echo "$i" | sed 's|-[[:digit:].]\{1,\}\.ttf$|.ttf|')"
+        install -Dm 644 "$i" "$PKG/usr/share/fonts/TTF/$destname"
+    done
+}

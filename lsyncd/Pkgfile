@@ -1,0 +1,17 @@
+# Description: Live Syncing (Mirror) Daemon
+# URL: http://code.google.com/p/lsyncd/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: lua,rsync,asciidoc
+
+name=lsyncd
+version=2.1.2
+release=1
+source=(http://lsyncd.googlecode.com/files/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}

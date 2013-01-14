@@ -1,0 +1,5 @@
+#!/bin/sh
+
+fc-cache -f > /dev/null
+mkfontscale /usr/share/fonts/local
+mkfontdir /usr/share/fonts/local

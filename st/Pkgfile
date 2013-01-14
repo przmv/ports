@@ -1,0 +1,15 @@
+# Description: st is a simple virtual terminal emulator for X which sucks less
+# URL: http://st.suckless.org
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg-libx11
+
+name=st
+version=0.3
+release=2
+source=(http://dl.suckless.org/$name/$name-$version.tar.gz config.h)
+
+build() {
+    cd $name-$version
+    cp $SRC/config.h config.h
+    make PREFIX=/usr DESTDIR=$PKG install
+}

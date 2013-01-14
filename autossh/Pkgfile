@@ -1,0 +1,17 @@
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Description: Automatically restart SSH sessions and tunnels
+# Url: http://www.harding.motd.ca/autossh/
+# Depends on: openssh
+
+name=autossh
+version=1.4c
+release=1
+source=(http://www.harding.motd.ca/autossh/$name-$version.tgz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=$PKG/usr --sysconfdir=/etc --localstatedir=/var
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/doc/autossh
+}
