@@ -1,0 +1,21 @@
+# Description: Lightweight PDF and XPS viewer
+# URL: http://www.mupdf.com/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: freetype libjpeg xorg-libxext
+
+name=mupdf
+version=1.1
+release=1
+source=(http://mupdf.com/download/$name-$version-source.tar.gz
+        http://mupdf.com/download/$name-thirdparty-2012-08-14.zip
+        mupdf-continuous-scrolling.patch)
+
+build() {
+    mv thirdparty $name-$version-source
+    cd $name-$version-source
+    patch -p1 < ../mupdf-continuous-scrolling.patch
+    rm -r thirdparty/{freetype*,jpeg*,zlib*}
+    make build=release
+    make prefix=$PKG/usr mandir=$PKG/usr/man install
+    rm -r $PKG/usr/{include,lib}
+}
