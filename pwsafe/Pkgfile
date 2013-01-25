@@ -1,0 +1,25 @@
+# Description: pwsafe is commandline program that manages encrypted password databases
+# URL: http://sourceforge.net/projects/pwsafe
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg openssl
+
+name=pwsafe
+version=0.2.0
+release=1
+source=(http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+pwsafe-XChangeProperty.patch)
+
+build () {
+    cd $name-$version
+
+    patch -Np0 -i ../pwsafe-XChangeProperty.patch
+
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+
+    # Make pwsafe suid root so it can seed rng as a user
+    chmod +s ${PKG}/usr/bin/pwsafe
+}
+
