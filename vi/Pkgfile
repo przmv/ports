@@ -1,0 +1,19 @@
+# Description: The original ex/vi text editor
+# URL: http://ex-vi.sourceforge.net/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: musl
+
+name=vi
+version=050325
+release=3
+source=(http://downloads.sourceforge.net/sourceforge/ex-vi/ex-$version.tar.bz2)
+
+build() {
+	cd ex-$version
+	make CC='musl-gcc -static' PREFIX=/usr LIBEXECDIR=/usr/lib/ex PRESERVEDIR=/var/lib/ex \
+		'FEATURES=-DCHDIR -DFASTTAG -DUCVISUAL -DMB -DBIT8' TERMLIB=ncurses
+
+	make CC='musl-gcc -static' PREFIX=/usr LIBEXECDIR=/usr/lib/ex PRESERVEDIR=/var/lib/ex INSTALL=/usr/bin/install \
+		DESTDIR=$PKG install
+}
