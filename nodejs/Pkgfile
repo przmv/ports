@@ -1,0 +1,20 @@
+# Description: Evented I/O for V8 javascript
+# URL: http://nodejs.org/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: openssl python
+
+name=nodejs
+version=0.8.19
+release=1
+source=(http://nodejs.org/dist/v$version/node-v$version.tar.gz)
+
+build() {
+    cd node-v$version
+    ./configure \
+        --prefix=/usr \
+        --shared-openssl
+    make
+
+    make DESTDIR=$PKG install
+}
