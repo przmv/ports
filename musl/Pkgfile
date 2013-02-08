@@ -6,11 +6,12 @@
 
 name=musl
 version=0.9.9
-release=1
+release=2
 source=(http://www.musl-libc.org/releases/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr/musl --exec-prefix=/usr --syslibdir=/usr/lib && make
+    ./configure --prefix=/usr/musl --exec-prefix=/usr --syslibdir=/usr/musl/lib
+    make
     make DESTDIR=$PKG install
 }

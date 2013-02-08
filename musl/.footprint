@@ -1,8 +1,6 @@
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/musl-gcc
-drwxr-xr-x	root/root	usr/lib/
-lrwxrwxrwx	root/root	usr/lib/ld-musl-x86_64.so.1 -> /usr/musl/lib/libc.so
 drwxr-xr-x	root/root	usr/musl/
 drwxr-xr-x	root/root	usr/musl/include/
 -rw-r--r--	root/root	usr/musl/include/aio.h
@@ -203,6 +201,7 @@ drwxr-xr-x	root/root	usr/musl/lib/
 -rw-r--r--	root/root	usr/musl/lib/crt1.o
 -rw-r--r--	root/root	usr/musl/lib/crti.o
 -rw-r--r--	root/root	usr/musl/lib/crtn.o
+lrwxrwxrwx	root/root	usr/musl/lib/ld-musl-x86_64.so.1 -> /usr/musl/lib/libc.so
 -rw-r--r--	root/root	usr/musl/lib/libc.a
 -rwxr-xr-x	root/root	usr/musl/lib/libc.so
 -rw-r--r--	root/root	usr/musl/lib/libcrypt.a
