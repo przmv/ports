@@ -2,14 +2,15 @@
 # URL: http://surf.suckless.org
 # Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
 # Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
-# Depends on: gtk, webkit
+# Depends on: gtk, webkit, dmenu, xorg-xprop, st
 
 name=surf
-version=0.5
+version=0.6
 release=1
-source=(http://dl.suckless.org/$name/$name-$version.tar.gz)
+source=(http://dl.suckless.org/$name/$name-$version.tar.gz config.h)
 
 build() {
     cd $name-$version
+    cp $SRC/config.h config.h
     make PREFIX=/usr DESTDIR=$PKG install
 }
