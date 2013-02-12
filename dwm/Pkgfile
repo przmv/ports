@@ -6,7 +6,7 @@
 
 name=dwm
 version=6.0
-release=1
+release=2
 source=(http://dl.suckless.org/$name/$name-$version.tar.gz
 config.h
 dwm.desktop)
@@ -20,6 +20,6 @@ build() {
     sed -i 's/^LDFLAGS = -g/#LDFLAGS += -g/g' config.mk
     sed -i 's/^#LDFLAGS = -s/LDFLAGS += -s/g' config.mk
     make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
-    make PREFIX=/usr DESTDIR=$PKG install
+    make PREFIX=/usr MANPREFIX=/usr DESTDIR=$PKG install
     install -m644 -D $SRC/dwm.desktop $PKG/usr/share/xsessions/dwm.desktop
 }

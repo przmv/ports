@@ -11,5 +11,5 @@ source=(http://dl.suckless.org/$name/$name-$version.tar.gz config.h)
 build() {
     cd $name-$version
     cp $SRC/config.h config.h
-    make PREFIX=/usr MANPREFIX=/usr DESTDIR=$PKG install
+    make PREFIX=/usr MANPREFIX=/usr/man DESTDIR=$PKG install
 }
