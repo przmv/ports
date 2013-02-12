@@ -6,11 +6,11 @@
 
 name=tabbed
 version=0.4.1
-release=2
+release=3
 source=(http://dl.suckless.org/tools/$name-$version.tar.gz config.h)
 
 build() {
     cd $name-$version
     cp $SRC/config.h config.h
-    make PREFIX=/usr DESTDIR=$PKG install
+    make PREFIX=/usr MANPREFIX=/usr DESTDIR=$PKG install
 }
