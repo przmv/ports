@@ -11,7 +11,7 @@ source=(http://lsyncd.googlecode.com/files/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
-    ./configure --prefix=/usr
+    ./configure --prefix=/usr --mandir=/usr/man
     make
     make DESTDIR=$PKG install
 }
