@@ -17,4 +17,7 @@ build() {
     make
 
     make DESTDIR=$PKG install
+
+    mv $PKG/usr/share/man $PKG/usr
+    rm -r $PKG/usr/share
 }

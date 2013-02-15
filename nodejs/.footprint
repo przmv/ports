@@ -1003,7 +1003,6 @@ drwxr-xr-x	root/root	usr/lib/node_modules/npm/scripts/
 -rwxr-xr-x	root/root	usr/lib/node_modules/npm/scripts/install.sh
 -rw-r--r--	root/root	usr/lib/node_modules/npm/scripts/release.sh
 -rwxr-xr-x	root/root	usr/lib/node_modules/npm/scripts/relocate.sh
-drwxr-xr-x	root/root	usr/share/
-drwxr-xr-x	root/root	usr/share/man/
-drwxr-xr-x	root/root	usr/share/man/man1/
--rw-r--r--	root/root	usr/share/man/man1/node.1.gz
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man1/
+-rw-r--r--	root/root	usr/man/man1/node.1.gz
