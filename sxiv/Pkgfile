@@ -13,6 +13,6 @@ sxiv.desktop)
 build() {
     cd $name-$version
     make
-    make PREFIX=$PKG/usr install
+    make PREFIX=/usr MANPREFIX=/usr/man DESTDIR=$PKG install
     install -D -m644 $SRC/sxiv.desktop $PKG/usr/share/applications/sxiv.desktop
 }
