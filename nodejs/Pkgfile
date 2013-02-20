@@ -20,4 +20,7 @@ build() {
 
     mv $PKG/usr/share/man $PKG/usr
     rm -r $PKG/usr/share
+
+    find $PKG -name 'README*' -delete
+    find $PKG -name 'AUTHORS' -delete
 }
