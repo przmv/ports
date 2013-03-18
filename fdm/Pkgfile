@@ -1,0 +1,17 @@
+# Description: Program to fetch and deliver mail
+# URL: http://fdm.sourceforge.net/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: openssl tdb zlib
+
+name=fdm
+version=1.7
+release=1
+source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure
+    make PREFIX=/usr
+    make PREFIX=/usr DESTDIR=$PKG install
+}
