@@ -1,0 +1,17 @@
+# Description: Font family which aims at metric compatibility with Arial, Times New Roman, and Courier New
+# URL: https://www.redhat.com/promo/fonts/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg-mkfontdir, xorg-mkfontscale, fontconfig
+
+name=xorg-font-liberation-ttf
+version=2.00.1
+release=1
+source=(https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-ttf-$version.tar.gz)
+
+build() {
+    cd liberation-fonts-ttf-$version
+
+    install -d -m 0755 $PKG/usr/share/fonts/X11/TTF
+    install -m 0644 *.ttf $PKG/usr/share/fonts/X11/TTF
+}
