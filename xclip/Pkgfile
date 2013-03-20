@@ -1,0 +1,18 @@
+# Description: Command line interface to the X11 clipboard
+# URL: http://sourceforge.net/projects/xclip
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: xorg-libxmu
+
+name=xclip
+version=0.12
+release=1
+source=(http://downloads.sourceforge.net/sourceforge/xclip/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+}
