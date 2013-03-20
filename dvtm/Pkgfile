@@ -1,0 +1,18 @@
+# Description: Dynamic virtual terminal manager
+# URL: http://brain-dump.org/projects/dvtm/
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on:
+
+name=dvtm
+version=0.8
+release=1
+source=(http://brain-dump.org/projects/$name/$name-$version.tar.gz config.h)
+
+build() {
+    cd $name-$version
+    cp $SRC/config.h .
+    sed -i "s/SRC/SOURCE/" Makefile
+    make
+    make PREFIX=/usr MANPREFIX=/usr/man DESTDIR=$PKG install
+}
