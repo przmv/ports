@@ -46,7 +46,6 @@ drwxr-xr-x	root/root	usr/lib/go/lib/godoc/
 -rw-r--r--	root/root	usr/lib/go/lib/godoc/search.html
 -rw-r--r--	root/root	usr/lib/go/lib/godoc/search.txt
 drwxr-xr-x	root/root	usr/lib/go/lib/time/
--rw-r--r--	root/root	usr/lib/go/lib/time/README
 -rwxr-xr-x	root/root	usr/lib/go/lib/time/update.bash
 -rw-r--r--	root/root	usr/lib/go/lib/time/zoneinfo.zip
 drwxr-xr-x	root/root	usr/lib/go/pkg/
@@ -432,7 +431,6 @@ drwxr-xr-x	root/root	usr/lib/go/src/cmd/cgo/
 -rw-r--r--	root/root	usr/lib/go/src/cmd/cgo/out.go
 -rw-r--r--	root/root	usr/lib/go/src/cmd/cgo/util.go
 drwxr-xr-x	root/root	usr/lib/go/src/cmd/dist/
--rw-r--r--	root/root	usr/lib/go/src/cmd/dist/README
 -rw-r--r--	root/root	usr/lib/go/src/cmd/dist/a.h
 -rw-r--r--	root/root	usr/lib/go/src/cmd/dist/arg.h
 -rw-r--r--	root/root	usr/lib/go/src/cmd/dist/buf.c
@@ -653,7 +651,6 @@ drwxr-xr-x	root/root	usr/lib/go/src/cmd/go/testdata/testimport/p2/
 -rw-r--r--	root/root	usr/lib/go/src/cmd/go/version.go
 -rw-r--r--	root/root	usr/lib/go/src/cmd/go/vet.go
 drwxr-xr-x	root/root	usr/lib/go/src/cmd/godoc/
--rw-r--r--	root/root	usr/lib/go/src/cmd/godoc/README.godoc-app
 -rw-r--r--	root/root	usr/lib/go/src/cmd/godoc/appinit.go
 -rw-r--r--	root/root	usr/lib/go/src/cmd/godoc/codewalk.go
 -rw-r--r--	root/root	usr/lib/go/src/cmd/godoc/dirtrees.go
@@ -1399,8 +1396,6 @@ drwxr-xr-x	root/root	usr/lib/go/src/pkg/image/png/testdata/
 -rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/invalid-trunc.png
 -rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/invalid-zlib.png
 drwxr-xr-x	root/root	usr/lib/go/src/pkg/image/png/testdata/pngsuite/
--rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/pngsuite/README
--rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/pngsuite/README.original
 -rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/pngsuite/basn0g01-30.png
 -rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/pngsuite/basn0g01-30.sng
 -rw-r--r--	root/root	usr/lib/go/src/pkg/image/png/testdata/pngsuite/basn0g01.png
@@ -1947,7 +1942,6 @@ drwxr-xr-x	root/root	usr/lib/go/src/pkg/regexp/syntax/
 -rw-r--r--	root/root	usr/lib/go/src/pkg/regexp/syntax/simplify.go
 -rw-r--r--	root/root	usr/lib/go/src/pkg/regexp/syntax/simplify_test.go
 drwxr-xr-x	root/root	usr/lib/go/src/pkg/regexp/testdata/
--rw-r--r--	root/root	usr/lib/go/src/pkg/regexp/testdata/README
 -rw-r--r--	root/root	usr/lib/go/src/pkg/regexp/testdata/basic.dat
 -rw-r--r--	root/root	usr/lib/go/src/pkg/regexp/testdata/nullsubexpr.dat
 -rw-r--r--	root/root	usr/lib/go/src/pkg/regexp/testdata/re2-exhaustive.txt.bz2
@@ -2678,14 +2672,12 @@ drwxr-xr-x	root/root	usr/share/go/misc/cgo/testso/
 -rwxr-xr-x	root/root	usr/share/go/misc/cgo/testso/test.bash
 drwxr-xr-x	root/root	usr/share/go/misc/chrome/
 drwxr-xr-x	root/root	usr/share/go/misc/chrome/gophertool/
--rw-r--r--	root/root	usr/share/go/misc/chrome/gophertool/README.txt
 -rw-r--r--	root/root	usr/share/go/misc/chrome/gophertool/background.html
 -rw-r--r--	root/root	usr/share/go/misc/chrome/gophertool/gopher.js
 -rw-r--r--	root/root	usr/share/go/misc/chrome/gophertool/gopher.png
 -rw-r--r--	root/root	usr/share/go/misc/chrome/gophertool/manifest.json
 -rw-r--r--	root/root	usr/share/go/misc/chrome/gophertool/popup.html
 drwxr-xr-x	root/root	usr/share/go/misc/dashboard/
--rw-r--r--	root/root	usr/share/go/misc/dashboard/README
 drwxr-xr-x	root/root	usr/share/go/misc/dashboard/app/
 -rw-r--r--	root/root	usr/share/go/misc/dashboard/app/app.yaml
 drwxr-xr-x	root/root	usr/share/go/misc/dashboard/app/build/
@@ -2721,7 +2713,6 @@ drwxr-xr-x	root/root	usr/share/go/misc/dist/darwin/scripts/
 -rw-r--r--	root/root	usr/share/go/misc/dist/stat_linux.go
 drwxr-xr-x	root/root	usr/share/go/misc/dist/windows/
 -rw-r--r--	root/root	usr/share/go/misc/dist/windows/LICENSE.rtf
--rw-r--r--	root/root	usr/share/go/misc/dist/windows/README.txt
 drwxr-xr-x	root/root	usr/share/go/misc/dist/windows/images/
 -rw-r--r--	root/root	usr/share/go/misc/dist/windows/images/Banner.jpg
 -rw-r--r--	root/root	usr/share/go/misc/dist/windows/images/Dialog.jpg
@@ -2736,17 +2727,14 @@ drwxr-xr-x	root/root	usr/share/go/misc/fraise/
 -rw-r--r--	root/root	usr/share/go/misc/fraise/readme.txt
 drwxr-xr-x	root/root	usr/share/go/misc/goplay/
 -rw-r--r--	root/root	usr/share/go/misc/goplay/Makefile
--rw-r--r--	root/root	usr/share/go/misc/goplay/README
 -rw-r--r--	root/root	usr/share/go/misc/goplay/doc.go
 -rw-r--r--	root/root	usr/share/go/misc/goplay/goplay.go
 drwxr-xr-x	root/root	usr/share/go/misc/kate/
 -rw-r--r--	root/root	usr/share/go/misc/kate/go.xml
 drwxr-xr-x	root/root	usr/share/go/misc/notepadplus/
--rwxr-xr-x	root/root	usr/share/go/misc/notepadplus/README
 -rwxr-xr-x	root/root	usr/share/go/misc/notepadplus/go.xml
 -rwxr-xr-x	root/root	usr/share/go/misc/notepadplus/userDefineLang.xml
 drwxr-xr-x	root/root	usr/share/go/misc/osx/
--rw-r--r--	root/root	usr/share/go/misc/osx/README
 drwxr-xr-x	root/root	usr/share/go/misc/osx/etc/
 drwxr-xr-x	root/root	usr/share/go/misc/osx/etc/paths.d/
 -rw-r--r--	root/root	usr/share/go/misc/osx/etc/paths.d/go
@@ -2786,11 +2774,9 @@ drwxr-xr-x	root/root	usr/share/go/misc/vim/syntax/
 -rw-r--r--	root/root	usr/share/go/misc/vim/syntax/godoc.vim
 drwxr-xr-x	root/root	usr/share/go/misc/xcode/
 drwxr-xr-x	root/root	usr/share/go/misc/xcode/3/
--rw-r--r--	root/root	usr/share/go/misc/xcode/3/README
 -rw-r--r--	root/root	usr/share/go/misc/xcode/3/go.pbfilespec
 -rw-r--r--	root/root	usr/share/go/misc/xcode/3/go.xclangspec
 drwxr-xr-x	root/root	usr/share/go/misc/xcode/4/
--rw-r--r--	root/root	usr/share/go/misc/xcode/4/README
 -rw-r--r--	root/root	usr/share/go/misc/xcode/4/go.xclangspec
 -rwxr-xr-x	root/root	usr/share/go/misc/xcode/4/go4xcode.sh
 drwxr-xr-x	root/root	usr/share/go/misc/zsh/

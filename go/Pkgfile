@@ -80,4 +80,7 @@ build() {
     rm -f $PKG/usr/share/go/doc/articles/wiki/get.bin
 
     install -Dm644 VERSION $PKG/usr/lib/go/VERSION
+
+    # Remove junk files
+    find $PKG -name 'README*' -delete
 }
