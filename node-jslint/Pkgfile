@@ -1,0 +1,18 @@
+# Description: Command-line JSLint, installed through npm
+# URL: https://github.com/reid/node-jslint
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: nodejs
+
+name=node-jslint
+version=0.1.9
+release=1
+source=(https://github.com/reid/$name/archive/v$version.tar.gz)
+
+build() {
+    cd $name-$version
+    mkdir -p $PKG/usr
+    npm install -g --prefix="$PKG/usr"
+    chown -R root:root $PKG/usr/lib/node_modules
+    find $PKG -name 'README*' -delete
+}

@@ -1,0 +1,37 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+lrwxrwxrwx	root/root	usr/bin/jslint -> ../lib/node_modules/jslint/bin/jslint.js
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/node_modules/
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/.npmignore
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/LICENSE
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/Makefile
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/bin/
+-rwxr-xr-x	root/root	usr/lib/node_modules/jslint/bin/jslint.js
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/lib/
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/lib/color.js
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/lib/jslint.js
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/lib/linter.js
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/lib/nodelint.js
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/lib/reporter.js
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/.bin/
+lrwxrwxrwx	root/root	usr/lib/node_modules/jslint/node_modules/.bin/nopt -> ../nopt/bin/nopt.js
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/.npmignore (EMPTY)
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/LICENSE
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/bin/
+-rwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/bin/nopt.js
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/examples/
+-rwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/examples/my-program.js
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/lib/
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/lib/nopt.js
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/node_modules/
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/node_modules/abbrev/
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/node_modules/abbrev/LICENSE
+drwxr-xr-x	root/root	usr/lib/node_modules/jslint/node_modules/nopt/node_modules/abbrev/lib/
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/node_modules/abbrev/lib/abbrev.js
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/node_modules/abbrev/package.json
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/node_modules/nopt/package.json
+-rw-r--r--	root/root	usr/lib/node_modules/jslint/package.json
