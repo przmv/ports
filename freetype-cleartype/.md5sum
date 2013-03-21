@@ -1,6 +1,0 @@
-a26310abfa02cde26cf56a28cf5f0eba  bytecode.patch
-214119610444c9b02766ccee5e220680  freetype-2.2.1-enable-valid.patch
-6fb6606d28082ecb8e0c6d986b0b26aa  freetype-2.2.1-memcpy-fix.patch
-70d23f3557750c0503689d3314958d89  freetype-2.2.1-subpixel-disable-quantization.diff
-816dc8619a6904a7385769433c0a8653  freetype-2.3.0-enable-spr.patch
-b93435488942486c8d0ca22e8f768034  freetype-2.4.11.tar.bz2
