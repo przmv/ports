@@ -1,0 +1,31 @@
+# Description: A 2D graphics library with support for multiple output devices with Ubuntu's LCD rendering patches
+# URL: http://www.cairographics.org/
+# Depends on: fontconfig-ubuntu, libpng, xorg-libxext, xorg-libxrender, xorg-libpixman, xorg-xcb-util, glib
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+
+name=cairo-ubuntu
+version=1.12.14
+release=1
+source=(http://cairographics.org/releases/cairo-$version.tar.xz
+http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_$version-0ubuntu1.debian.tar.gz
+cairo-respect-fontconfig.patch)
+
+build() {
+	cd cairo-$version
+
+	for _f in $(cat "$SRC/debian/patches/series" | grep -v '#') ; do
+		patch -Np1 -i "$SRC/debian/patches/$_f"
+	done
+
+	patch -Np1 -i "$SRC/cairo-respect-fontconfig.patch"
+
+	autoreconf -vfi
+	./configure --prefix=/usr \
+		--enable-xcb=yes \
+		--enable-ps \
+		--enable-pdf \
+		--disable-gtk-doc
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share
+}

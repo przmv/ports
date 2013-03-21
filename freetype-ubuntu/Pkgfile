@@ -1,0 +1,34 @@
+# Description: A free and portable TrueType font rendering engine, with Ubuntu's LCD rendering patches
+# URL: http://www.freetype.org
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: zlib
+
+name=freetype-ubuntu
+version=2.4.11
+release=1
+source=(http://download.savannah.gnu.org/releases/freetype/freetype-$version.tar.bz2
+http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_$version-0ubuntu1.diff.gz
+freetype-2.2.1-enable-valid.patch)
+
+build() {
+	gunzip freetype_$version-0ubuntu1.diff.gz
+
+	cd freetype-$version
+
+	patch -Np1 -i $SRC/freetype_$version-0ubuntu1.diff
+
+	sed -e "s/-p[0-9]\|.*otvalid\.patch//g" -i debian/patches-freetype/series
+	sed -i -e "s#\ssrc# freetype-$version/src#g" debian/patches-freetype/freetype-2.1.7-backwards.compat.patch
+
+	for _f in $(cat "debian/patches-freetype/series" | grep -v '#') ; do
+		patch -Np1 -i "debian/patches-freetype/$_f"
+	done
+
+	patch -Np1 -i $SRC/freetype-2.2.1-enable-valid.patch
+
+	./configure --prefix=/usr \
+		--with-zlib \
+		--disable-nls
+	make
+	make DESTDIR=$PKG install
+}
