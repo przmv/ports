@@ -11,8 +11,8 @@ source=(https://github.com/downloads/muennich/$name/$name-$version.tar.gz
 sxiv.desktop)
 
 build() {
-    cd $name-$version
-    make
-    make PREFIX=/usr MANPREFIX=/usr/man DESTDIR=$PKG install
-    install -D -m644 $SRC/sxiv.desktop $PKG/usr/share/applications/sxiv.desktop
+	cd $name-$version
+	make
+	make PREFIX=/usr MANPREFIX=/usr/man DESTDIR=$PKG install
+	install -D -m644 $SRC/sxiv.desktop $PKG/usr/share/applications/sxiv.desktop
 }
