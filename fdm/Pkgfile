@@ -10,8 +10,8 @@ release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
 build() {
-    cd $name-$version
-    ./configure
-    make PREFIX=/usr
-    make PREFIX=/usr DESTDIR=$PKG install
+	cd $name-$version
+	./configure
+	make PREFIX=/usr
+	make PREFIX=/usr DESTDIR=$PKG install
 }

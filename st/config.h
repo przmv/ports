@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static char font[] = "Terminus:file=ter-x12n.pcf.gz";
+static char font[] = "PT Mono:pixelsize=12";
 static unsigned int borderpx = 2;
 static char shell[] = "/bin/sh";
 
