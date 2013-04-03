@@ -5,7 +5,7 @@
 # Depends on:
 
 name=dvtm
-version=0.8
+version=0.9
 release=1
 source=(http://brain-dump.org/projects/$name/$name-$version.tar.gz config.h)
 
