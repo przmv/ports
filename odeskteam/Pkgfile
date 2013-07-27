@@ -1,0 +1,23 @@
+# Description: oDesk Team - complete time-logging and verification system
+# URL: https://odesk.com/downloads
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Packager: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: qt4 ffmpeg-compat
+
+name=odeskteam
+version=3.6.17
+release=1
+source=(https://www.odesk.com/downloads/linux/beta/$name-$version-1fc17.x86_64.rpm $name.sh)
+
+build() {
+	install -D -m 0755 usr/bin/$name-qt4 \
+		$PKG/usr/bin/$name-qt4
+	install -D -m 0755 $SRC/$name.sh \
+		$PKG/usr/bin/$name
+	install -D -m 0644 usr/share/applications/$name.desktop \
+		$PKG/usr/share/applications/$name.desktop
+	install -D -m 0644 usr/share/$name/COPYING \
+		$PKG/usr/share/$name/COPYING
+	install -D -m 0644 usr/share/pixmaps/$name.png \
+		$PKG/usr/share/pixmaps/$name.png
+}
