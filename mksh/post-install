@@ -1,0 +1,2 @@
+#!/bin/sh
+grep -x /bin/mksh /etc/shells >/dev/null || echo /bin/mksh >>/etc/shells

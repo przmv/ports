@@ -1,0 +1,17 @@
+# Description: the MirBSD Korn Shell, built against musl-libc
+# URL: https://www.mirbsd.org/mksh.htm
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: musl
+
+name=mksh
+version=47
+release=1
+source=(https://www.mirbsd.org/MirOS/dist/mir/$name/$name-R$version.tgz)
+
+build() {
+	cd $name
+	CC='musl-gcc -static' sh Build.sh -r
+	install -D -m 0755 $name $PKG/bin/$name
+	install -D -m 0644 $name.1 $PKG/usr/man/man1/$name.1
+	install -D -m 0644 dot.${name}rc $PKG/etc/${name}rc
+}
