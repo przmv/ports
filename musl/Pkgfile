@@ -5,8 +5,8 @@
 # Depends on:
 
 name=musl
-version=0.9.9
-release=2
+version=0.9.11
+release=1
 source=(http://www.musl-libc.org/releases/$name-$version.tar.gz)
 
 build() {

@@ -7,9 +7,12 @@ drwxr-xr-x	root/root	usr/musl/include/
 -rw-r--r--	root/root	usr/musl/include/alloca.h
 -rw-r--r--	root/root	usr/musl/include/ar.h
 drwxr-xr-x	root/root	usr/musl/include/arpa/
+-rw-r--r--	root/root	usr/musl/include/arpa/ftp.h
 -rw-r--r--	root/root	usr/musl/include/arpa/inet.h
 -rw-r--r--	root/root	usr/musl/include/arpa/nameser.h
+-rw-r--r--	root/root	usr/musl/include/arpa/nameser_compat.h
 -rw-r--r--	root/root	usr/musl/include/arpa/telnet.h
+-rw-r--r--	root/root	usr/musl/include/arpa/tftp.h
 -rw-r--r--	root/root	usr/musl/include/assert.h
 drwxr-xr-x	root/root	usr/musl/include/bits/
 -rw-r--r--	root/root	usr/musl/include/bits/alltypes.h
@@ -37,7 +40,6 @@ drwxr-xr-x	root/root	usr/musl/include/bits/
 -rw-r--r--	root/root	usr/musl/include/bits/syscall.h
 -rw-r--r--	root/root	usr/musl/include/bits/termios.h
 -rw-r--r--	root/root	usr/musl/include/bits/user.h
--rw-r--r--	root/root	usr/musl/include/bits/wchar.h
 -rw-r--r--	root/root	usr/musl/include/byteswap.h
 -rw-r--r--	root/root	usr/musl/include/complex.h
 -rw-r--r--	root/root	usr/musl/include/cpio.h
@@ -59,6 +61,7 @@ drwxr-xr-x	root/root	usr/musl/include/bits/
 -rw-r--r--	root/root	usr/musl/include/glob.h
 -rw-r--r--	root/root	usr/musl/include/grp.h
 -rw-r--r--	root/root	usr/musl/include/iconv.h
+-rw-r--r--	root/root	usr/musl/include/ifaddrs.h
 -rw-r--r--	root/root	usr/musl/include/inttypes.h
 -rw-r--r--	root/root	usr/musl/include/iso646.h
 -rw-r--r--	root/root	usr/musl/include/langinfo.h
@@ -81,6 +84,7 @@ drwxr-xr-x	root/root	usr/musl/include/net/
 -rw-r--r--	root/root	usr/musl/include/net/route.h
 -rw-r--r--	root/root	usr/musl/include/netdb.h
 drwxr-xr-x	root/root	usr/musl/include/netinet/
+-rw-r--r--	root/root	usr/musl/include/netinet/ether.h
 -rw-r--r--	root/root	usr/musl/include/netinet/icmp6.h
 -rw-r--r--	root/root	usr/musl/include/netinet/if_ether.h
 -rw-r--r--	root/root	usr/musl/include/netinet/in.h
