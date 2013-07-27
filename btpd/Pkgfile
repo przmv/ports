@@ -1,0 +1,20 @@
+# Description: BitTorrent client consisting of a daemon and client commands to control the daemon
+# URL: http://github.com/btpd/btpd
+# Maintainer: Peter A. Shevtsov, pshevtsov at severusweb dot com
+# Depends on: openssl
+
+name=btpd
+version=0.16
+release=1
+source=(http://cloud.github.com/downloads/$name/$name/$name-$version.tar.gz
+        btpd.rc.d
+        btpd.conf)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	install -D -m755 $SRC/btpd.rc.d $PKG/etc/rc.d/btpd
+	install -D -m644 $SRC/btpd.conf $PKG/etc/btpd.conf
+}

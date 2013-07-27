@@ -1,0 +1,15 @@
+drwxr-xr-x	root/root	etc/
+-rw-r--r--	root/root	etc/btpd.conf
+drwxr-xr-x	root/root	etc/rc.d/
+-rwxr-xr-x	root/root	etc/rc.d/btpd
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/bin/
+-rwxr-xr-x	root/root	usr/bin/btcli
+-rwxr-xr-x	root/root	usr/bin/btinfo
+-rwxr-xr-x	root/root	usr/bin/btpd
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/man/
+drwxr-xr-x	root/root	usr/share/man/man1/
+-rw-r--r--	root/root	usr/share/man/man1/btcli.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/btinfo.1.gz
+-rw-r--r--	root/root	usr/share/man/man1/btpd.1.gz
